@@ -6,5 +6,7 @@ It contains short and faster version of many algorithms.
 Algorithms Implemented :-
 
 [Binary Exponentiation & gcd](https://github.com/smit-mist/My-CP-Assist/blob/main/basic_math.cpp)
+
 [Extended GCD](https://github.com/smit-mist/My-CP-Assist/blob/main/basic_math.cpp)
+
 [Sieve of Eratosthenes](https://github.com/smit-mist/My-CP-Assist/blob/main/basic_math.cpp)
