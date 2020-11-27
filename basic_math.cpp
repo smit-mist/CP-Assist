@@ -46,6 +46,11 @@ ll calcpom(ll a, ll b) {
 	}
 	return res % mod;
 }
+// Modulo inv. of a number mod must be prime number to use this
+// Also don't forget to inlucde calcpom with this one..
+ll modInv(ll k) {
+	return calcpom(k, mod - 2) % mod;
+}
 // Iterative code for Gcd to calculate in O(logN)..
 // Here N is min(a,b)
 
