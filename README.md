@@ -13,3 +13,5 @@ Algorithms Implemented :-
 
 [Modulo Inverse](https://github.com/smit-mist/My-CP-Assist/blob/main/basic_math.cpp)
 
+[Euler Tour](https://github.com/smit-mist/My-CP-Assist/blob/main/Tree%20%26%20Graph/euler_tour.cpp)
+
