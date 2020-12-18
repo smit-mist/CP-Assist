@@ -61,6 +61,19 @@ ll gcd (ll a, ll b) {
 	}
 	return a;
 }
+// To calculate nCr for given value of n and r modulo something..
+// include mod inverese and binary exponentiation...
+// also make an array to store factorial % mod...
+ll nCr(ll n, ll r) {
+
+	if (r == 0)
+		return 1;
+	if (r > n) {
+		return 0;
+	}
+
+	return (fact[n] * modInv(fact[r]) % mod * modInv(fact[n - r]) % mod) % mod;
+}
 // Extended GCD use this to solve Ax+By = C type of equation...
 // This function will return the gcd of both numbers..
 // but X, Y later on can be used as co-efficient of the above equation and gives us the solution..
