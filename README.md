@@ -17,3 +17,5 @@ Algorithms Implemented :-
 
 [nCr under mod](https://github.com/smit-mist/CP-Assist/blob/main/Math/basic_math.cpp)
 
+[Tree n Graph Basics](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/basic.cpp)
+
