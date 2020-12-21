@@ -18,4 +18,4 @@ Algorithms Implemented :-
 - Euler Tour
 
 [Range & Queries](https://github.com/smit-mist/CP-Assist/tree/main/Range%20%26%20Queries)
--Fenwick Tree
+- Fenwick Tree
