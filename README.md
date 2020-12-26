@@ -12,6 +12,9 @@ Algorithms Implemented :-
 - Mod Inverse
 - Binomial Co-efficient
 
+[Equations & Algebra](https://github.com/smit-mist/CP-Assist/blob/main/Math/equations.cpp)
+- Linear Diophantine Equation
+
 [Tree & Graph](https://github.com/smit-mist/CP-Assist/tree/main/Tree%20%26%20Graph)
 - Basics (Components of Graph)
 - Cycle Detection
