@@ -11,14 +11,15 @@ Algorithms Implemented :-
 - Binary Exp.
 - Mod Inverse
 - Binomial Co-efficient
+- [Linear Diophantine Equation](https://github.com/smit-mist/CP-Assist/blob/main/Math/equations.cpp)
 
-[Equations & Algebra](https://github.com/smit-mist/CP-Assist/blob/main/Math/equations.cpp)
-- Linear Diophantine Equation
 
-[Tree & Graph](https://github.com/smit-mist/CP-Assist/tree/main/Tree%20%26%20Graph)
-- Basics (Components of Graph)
-- Cycle Detection
-- Euler Tour
+Tree & Graph
+- [Basics (Components of Graph)](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/basic.cpp)
+- [Cycle Detection](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/cycles_in_graph.cpp)
+- [Euler Tour](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/euler_tour.cpp)
+- [Minimum Spanning tree Krushkal's Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/mst_krushkal.cpp)
 
-[Range & Queries](https://github.com/smit-mist/CP-Assist/tree/main/Range%20%26%20Queries)
-- Fenwick Tree
+Data Structures
+- [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/Range%20%26%20Queries/fenwick_aka_bst.cpp)
+- [Disjoint Set Uninon](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/mst_krushkal.cpp)
