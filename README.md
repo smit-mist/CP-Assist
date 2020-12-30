@@ -5,12 +5,12 @@ It contains short and faster version of many algorithms.
 
 Algorithms Implemented :-
 
-[Basic Maths](https://github.com/smit-mist/CP-Assist/blob/main/Math/basic_math.cpp)
-- GCD
-- Sieve
-- Binary Exp.
-- Mod Inverse
-- Binomial Co-efficient
+Basic Maths
+- [GCD](https://github.com/smit-mist/CP-Assist/blob/main/Math/basic_math.cpp)
+- [Sieve](https://github.com/smit-mist/CP-Assist/blob/main/Math/basic_math.cpp)
+- [Binary Exp.](https://github.com/smit-mist/CP-Assist/blob/main/Math/basic_math.cpp)
+- [Mod Inverse](https://github.com/smit-mist/CP-Assist/blob/main/Math/basic_math.cpp)
+- [Binomial Co-efficient](https://github.com/smit-mist/CP-Assist/blob/main/Math/basic_math.cpp)
 - [Linear Diophantine Equation](https://github.com/smit-mist/CP-Assist/blob/main/Math/equations.cpp)
 
 
