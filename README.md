@@ -15,6 +15,8 @@ Basic Maths
 - [Binomial Co-efficient](https://github.com/smit-mist/CP-Assist/blob/main/Math/basic_math.cpp)
 - [Linear Diophantine Equation](https://github.com/smit-mist/CP-Assist/blob/main/Math/equations.cpp)
 
+Basic Algorithms
+- [Binary Search](https://github.com/smit-mist/CP-Assist/blob/main/Basic%20Algorithms/binary_search.cpp)
 
 Tree & Graph
 - [Basics (Components of Graph)](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/basic.cpp)
