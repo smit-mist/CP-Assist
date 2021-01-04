@@ -23,6 +23,7 @@ Tree & Graph
 - [Cycle Detection](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/cycles_in_graph.cpp)
 - [Euler Tour](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/euler_tour.cpp)
 - [Minimum Spanning tree Krushkal's Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/mst_krushkal.cpp)
+- [SCC Kosaraju's Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/Tree%20%26%20Graph/scc_kosaraju's_algorithm.cpp)
 
 Data Structures
 - [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/Range%20%26%20Queries/fenwick_aka_bst.cpp)
