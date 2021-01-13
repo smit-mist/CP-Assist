@@ -18,8 +18,9 @@ using namespace std;
 #define mint map<int,int>
 #define mod 998244353
 #define ciN cin
-#define X INT_MAX
-#define N INT_MIN
+#define Z(s) get<0>(s)
+#define O(s) get<1>(s)
+#define T(s) get<2>(s)
 ////////////////////////////////////////////////////////////////
 
 
