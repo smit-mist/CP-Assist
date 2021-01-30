@@ -28,4 +28,5 @@ Tree & Graph
 
 Data Structures
 - [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/fenwick_aka_bst.cpp)
+- [Segment Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/segment_tree.cpp)
 - [Disjoint Set Uninon](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/mst_krushkal.cpp)
