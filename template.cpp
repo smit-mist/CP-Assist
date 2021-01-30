@@ -24,6 +24,7 @@ using namespace std;
 #define ciN cin
 #define tu(a,s) get<a>(s)
 #define tin tuple<int,int,int>
+#define ter(x,y,z) ((x)?y:z)
 ////////////////////////////////////////////////////////////////
 
 void jabru() {
