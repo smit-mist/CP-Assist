@@ -46,6 +46,18 @@ ll calcpom(ll a, ll b) {
 	}
 	return res % mod;
 }
+ll mult(ll a, ll b)
+{
+	return ((a % mod) * (b % mod)) % mod;
+}
+
+ll add(ll a, ll b)
+{
+	return ((a % mod) + (b % mod)) % mod;
+}
+ll sub(ll a, ll b) {
+	return ((a % mod) - (b % mod) + mod) % mod;
+}
 // Modulo inv. of a number mod must be prime number to use this
 // Also don't forget to inlucde calcpom with this one..
 ll modInv(ll k) {

@@ -1,5 +1,5 @@
 //Classic
-//g++ -std=c++11 -O2 -Wall a.cpp -o test
+//g++ -std=c++17 -O2 -Wall a.cpp -o test
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -15,21 +15,29 @@ using namespace std;
 #define S second
 #define For(i,a,b) for(ll i=a;i<b;i++)
 #define endl "\n"
-#define debug2(x,y) cout<<"AA Baju Smit----> "<<#x<<" -> "<<x<<" | "<<#y<<" -> "<<y<<endl;
-#define debug(x) cout<<"AA Baju Smit------> "<<#x<<" -> "<<x<<endl
+#define debug2(x,y) cout<<"This side ----> "<<#x<<" -> "<<x<<" | "<<#y<<" -> "<<y<<endl;
+#define debug(x) cout<<"This side    ----> "<<#x<<" -> "<<x<<endl
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(), x.rend()
 #define mint map<int,int>
-#define mod 1000000007
+//#define mod 1000000007
 #define ciN cin
 #define tu(a,s) get<a>(s)
-#define tin tuple<int,int,int>
+#define tin tuple<ll,ll,ll>
 #define ter(x,y,z) ((x)?y:z)
 ////////////////////////////////////////////////////////////////
+bool isGoogles = 0;
+bool TestCase = 1;
+const ll maxn = 1e6 + 10;
+const ll mod = 1000000007;
 
 void jabru() {
 
 }
+
+//////////////////////////////////////////////////////////////////
+
+
 
 
 int main() {
@@ -38,9 +46,19 @@ int main() {
 
 	ll t;
 	t = 1;
-	cin >> t;
+	if (TestCase) {
+		cin >> t;
+
+	}
+	ll ss = 1;
 	while (t--) {
+		if (isGoogles) {
+			cout << "Case #" << ss << ": ";
+
+		}
+		ss++;
 		jabru();
+
 	}
 
 	return 0;
