@@ -6,8 +6,11 @@ using namespace std;
 #define ld long double
 #define vll vector<ll>
 #define vi vector<int>
+#define vb vector<bool>
 #define pi pair<int,int>
+#define pll pair<ll,ll>
 #define vp vector<pi>
+#define vpll vector<pll>
 #define pb push_back
 #define mp make_pair
 #define mt make_tuple
@@ -20,20 +23,23 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(), x.rend()
 #define mint map<int,int>
-//#define mod 1000000007
 #define ciN cin
 #define tu(a,s) get<a>(s)
 #define tin tuple<ll,ll,ll>
 #define ter(x,y,z) ((x)?y:z)
-////////////////////////////////////////////////////////////////
 bool isGoogles = 0;
-bool TestCase = 1;
-const ll maxn = 1e6 + 10;
+const ll maxn = 1e5 + 10;
 const ll mod = 1000000007;
+const ll bits = 10;
+ll caseNumber = 1;
+////////////////////////////////////////////////////////////////
 
 void jabru() {
 
 }
+
+bool TestCase = 0;
+
 
 //////////////////////////////////////////////////////////////////
 
@@ -43,27 +49,14 @@ void jabru() {
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-
 	ll t;
 	t = 1;
 	if (TestCase) {
 		cin >> t;
-
 	}
-	ll ss = 1;
 	while (t--) {
-		if (isGoogles) {
-			cout << "Case #" << ss << ": ";
-
-		}
-		ss++;
+		if (isGoogles) {cout << "Case #" << caseNumber << ": ";} caseNumber++;
 		jabru();
-
 	}
-
 	return 0;
-
-
-
-
 }
