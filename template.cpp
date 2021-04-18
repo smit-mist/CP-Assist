@@ -20,31 +20,53 @@ using namespace std;
 #define endl "\n"
 #define debug2(x,y) cout<<"This side ----> "<<#x<<" -> "<<x<<" | "<<#y<<" -> "<<y<<endl;
 #define debug(x) cout<<"This side    ----> "<<#x<<" -> "<<x<<endl
+//#define ai(a, n) for (int ele = 0; ele < n; ele++) cin >> a[ele];
+//#define ao(a, n) {for (int ele = 0; ele < (n); ele++) {cout << a[ele]<<" "; } cout << '\n';}
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(), x.rend()
 #define mint map<int,int>
+#define mall map<ll,ll>
 #define ciN cin
-#define tu(a,s) get<a>(s)
+#define g(a,s) get<a>(s)
 #define tin tuple<ll,ll,ll>
 #define ter(x,y,z) ((x)?y:z)
+/////////////
 bool isGoogles = 0;
-const ll maxn = 1e5 + 10;
+const ll maxn = 5e5 + 10;
+const ll max_val = 2e5 + 10;
 const ll mod = 1000000007;
 const ll bits = 10;
 ll caseNumber = 1;
 ////////////////////////////////////////////////////////////////
+/*
+
+
+*/
+
+
+
 
 void jabru() {
 
-}
 
-bool TestCase = 0;
+}
+bool TestCase = 1;
+
 
 
 //////////////////////////////////////////////////////////////////
 
 
 
+
+
+
+void brain_wash() {
+
+}
+
+
+//////////////////////////////////////////////////////////
 
 int main() {
 	ios::sync_with_stdio(0);
@@ -57,6 +79,12 @@ int main() {
 	while (t--) {
 		if (isGoogles) {cout << "Case #" << caseNumber << ": ";} caseNumber++;
 		jabru();
+		brain_wash();
+
 	}
 	return 0;
 }
+
+/*
+
+*/
