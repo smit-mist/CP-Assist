@@ -28,6 +28,9 @@ using namespace std;
 struct segtree
 {
 	// Ending of the range is non inclusive, and starting is inclusive :)
+	// Update index must be 0 based
+	// L must be 0 based
+	// R must be 1 based
 	vector<ll>sums;
 	ll size = 1;
 
