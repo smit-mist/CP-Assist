@@ -27,6 +27,7 @@ using namespace std;
 ////////////////////////////////////////////////////////////////
 struct segtree
 {
+	// Ending of the range is non inclusive, and starting is inclusive :)
 	vector<ll>sums;
 	ll size = 1;
 
@@ -70,6 +71,7 @@ struct segtree
 		set(i, v, 0, 0, size);
 	}
 	ll sum(ll l, ll r, ll x, ll lx, ll rx) {
+		// R must be non Inclusive
 		if (lx >= r || rx <= l) {
 			return INT_MAX; // Change
 		}
