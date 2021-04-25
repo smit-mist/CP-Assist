@@ -26,6 +26,7 @@ Tree & Graph
 - [SCC Kosaraju's Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/scc_kosaraju's_algorithm.cpp)
 - [Bipartite Test](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/bipartite_test.cpp)
 - [Topological Sort](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/topological_sort.cpp)
+- [Dijkstra's Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/dijkstra.cpp)
 
 Data Structures
 - [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/fenwick_aka_bst.cpp)
