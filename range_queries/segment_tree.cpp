@@ -1,56 +1,84 @@
 //Classic
-//g++ -std=c++11 -O2 -Wall a.cpp -o test
+// //g++ -std=c++17 -O2 -Wall a.cpp -o test
+// _()_
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
 #define ld long double
 #define vll vector<ll>
 #define vi vector<int>
+#define vb vector<bool>
 #define pi pair<int,int>
+#define pll pair<ll,ll>
 #define vp vector<pi>
+#define vpll vector<pll>
 #define pb push_back
 #define mp make_pair
 #define mt make_tuple
 #define F first
 #define S second
 #define For(i,a,b) for(ll i=a;i<b;i++)
-#define endl "\n"
-#define debug2(x,y) cout<<"AA Baju Smit----> "<<#x<<" -> "<<x<<" | "<<#y<<" -> "<<y<<endl;
-#define debug(x) cout<<"AA Baju Smit------> "<<#x<<" -> "<<x<<endl
+//#define endl "\n"
+#define debug2(x,y) cout<<"This side ----> "<<#x<<" -> "<<x<<" | "<<#y<<" -> "<<y<<endl;
+#define debug(x) cout<<"This side    ----> "<<#x<<" -> "<<x<<endl
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(), x.rend()
 #define mint map<int,int>
-#define mod 1000000007
+#define mall map<ll,ll>
 #define ciN cin
-#define tu(a,s) get<a>(s)
-#define tin tuple<int,int,int>
+#define gu(a,s) get<a>(s)
+#define tin tuple<ll,ll,ll>
+#define ter(x,y,z) ((x)?y:z)
+#define ul ll
+/////////////
+
+const ll maxn = 2e5 + 5;
+const ll max_val = 2e5 + 10;
+ll mod = 1e9 + 7;
+const ll bits = 20;
+ll caseNumber = 1;
 ////////////////////////////////////////////////////////////////
+struct Item
+{
+	ll x;
+};
 struct segtree
 {
 	// Ending of the range is non inclusive, and starting is inclusive :)
 	// Update index must be 0 based
 	// L must be 0 based
 	// R must be 1 based
-	vector<ll>sums;
+	vector<Item>values;
 	ll size = 1;
-
+	Item NEUTRAL = {0};
+	Item merge(Item a, Item b) {
+		Item c; c.x = a.x;
+		//	if (b.x < a.x) {
+		c.x += b.x;
+		//	}
+		return c;
+	}
+	Item single(int x) {
+		Item c;
+		c.x = x;
+		return c;
+	}
 	void init(ll n) {
 		while (size < n)size *= 2;
-		sums.assign(2 * size, INT_MAX); // Change
-
+		values.assign(2 * size, NEUTRAL);
 	}
 
 	void build(vll &a, ll x, ll lx, ll rx) {
 		if (rx - lx == 1) {
-			if (lx < a.size()) {
-				sums[x] = a[lx];
-			}
+			if (lx < (ll)a.size())
+				values[x] = single(a[lx]);
 			return;
 		}
-		ll m = (lx + rx) / 2;
-		build(a, 2 * x + 1, lx, m);
-		build(a, 2 * x + 2, m, rx);
-		sums[x] = min(sums[2 * x + 1], sums[2 * x + 2]); // Change
+		ll mid = (rx + lx) / 2;
+		build(a, 2 * x + 1, lx, mid);
+		build(a, 2 * x + 2, mid, rx);
+		values[x] = merge(values[2 * x + 1], values[2 * x + 2]);
+
 	}
 	void build(vll &a) {
 		build(a, 0, 0, size);
@@ -58,60 +86,77 @@ struct segtree
 
 	void set(ll i, ll v, ll x, ll lx, ll rx) {
 		if (rx - lx == 1) {
-			sums[x] = v; return;
+			if (lx == i)
+				values[x] = single(v);
+			return;
 		}
-		ll m = (lx + rx) / 2;
-		if (i < m) {
-			set(i, v, 2 * x + 1, lx, m);
-		}
-		else {
-			set(i, v, 2 * x + 2, m, rx);
-		}
-		sums[x] = min(sums[2 * x + 1], sums[2 * x + 2]); // Change
+		if (lx > i)return;
+		if (rx < i)return;
+		ll mid = (rx + lx) / 2;
+		set(i, v, 2 * x + 1, lx, mid);
+		set(i, v, 2 * x + 2, mid, rx);
+		values[x] = merge(values[2 * x + 1], values[2 * x + 2]);
 	}
 
 	void set(ll i, ll v) {
 		set(i, v, 0, 0, size);
 	}
-	ll sum(ll l, ll r, ll x, ll lx, ll rx) {
-		// R must be non Inclusive
-		if (lx >= r || rx <= l) {
-			return INT_MAX; // Change
+	Item sum(ll l, ll r, ll x, ll lx, ll rx) {
+		if (rx <= r && lx >= l) {
+			//	debug(values[x].x);
+			return values[x];
 		}
-		if (lx >= l && rx <= r)return sums[x];
-		ll m = (lx + rx) / 2;
-		ll s1 = sum(l, r, 2 * x + 1, lx, m);
-		ll s2 = sum(l, r, 2 * x + 2, m, rx);
-		return min(s1, s2); // Change
+		if (rx - lx == 1) {
+			if (lx >= l && lx < r)return values[lx];
+			return NEUTRAL;
+		}
+		if (rx <= l)return NEUTRAL;
+		if (lx >= r)return NEUTRAL;
+		ll mid = (rx + lx) / 2;
+		return merge(sum(l, r, 2 * x + 1, lx, mid), sum(l, r, 2 * x + 2, mid, rx));
 	}
-
-	ll sum(ll l, ll r) {
+	Item sum(ll l, ll r) {
 		return sum(l, r, 0, 0, size);
 	}
 
+
 };
 void jabru() {
-
-	ll n, m; cin >> n >> m;
+	ll n, q; cin >> n >> q;
 	vll v(n);
-	segtree st;
-	st.init(n);
-	for (int i = 0; i < n; i++) {
-		cin >> v[i];
-	}
-	st.build(v);
-	for (int i = 0; i < m; i++) {
-		ll a, b, c; cin >> a >> b >> c;
-
-		if (a == 1) {
-			st.set(b, c);
+	for (int i = 0; i < n; i++)cin >> v[i];
+	segtree tree;
+	tree.init(n + 1);
+	tree.build(v);
+	for (int i = 0; i < q; i++) {
+		ll p; cin >> p;
+		if (p == 2) {
+			ll a, b; cin >> a >> b;
+			cout << tree.sum(a, b).x << endl;
 		}
 		else {
-			cout << st.sum(b, c) << endl;
+			ll a, b; cin >> a >> b;
+			tree.set(a, b);
 		}
+
 	}
+
+
 }
 
+
+
+bool TestCase = 0;
+bool isGoogles = 0;
+
+
+
+//////////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////////////////////////////////////
 
 int main() {
 	ios::sync_with_stdio(0);
@@ -119,14 +164,13 @@ int main() {
 
 	ll t;
 	t = 1;
-//	cin >> t;
-	while (t--) {
-		jabru();
+	if (TestCase) {
+		cin >> t;
 	}
+	while (t--) {
+		if (isGoogles) {cout << "Case #" << caseNumber << ": ";} caseNumber++;
+		jabru();
 
+	}
 	return 0;
-
-
-
-
 }
