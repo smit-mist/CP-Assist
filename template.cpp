@@ -1,5 +1,6 @@
-//Classic
-//g++ -std=c++17 -O2 -Wall a.cpp -o test
+// Qg3
+// //g++ -std=c++17 -O2 -Wall a.cpp -o test
+// _()_
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -17,53 +18,42 @@ using namespace std;
 #define F first
 #define S second
 #define For(i,a,b) for(ll i=a;i<b;i++)
-#define endl "\n"
+//#define endl "\n"
 #define debug2(x,y) cout<<"This side ----> "<<#x<<" -> "<<x<<" | "<<#y<<" -> "<<y<<endl;
 #define debug(x) cout<<"This side    ----> "<<#x<<" -> "<<x<<endl
-//#define ai(a, n) for (int ele = 0; ele < n; ele++) cin >> a[ele];
-//#define ao(a, n) {for (int ele = 0; ele < (n); ele++) {cout << a[ele]<<" "; } cout << '\n';}
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(), x.rend()
 #define mint map<int,int>
 #define mall map<ll,ll>
 #define ciN cin
-#define g(a,s) get<a>(s)
+#define gu(a,s) get<a>(s)
 #define tin tuple<ll,ll,ll>
 #define ter(x,y,z) ((x)?y:z)
+#define ul ll
 /////////////
-bool isGoogles = 0;
-const ll maxn = 5e5 + 10;
+
+const ll maxn = 1e5 + 5;
 const ll max_val = 2e5 + 10;
-const ll mod = 1000000007;
-const ll bits = 10;
+ll mod = 1e9 + 7;
+const ll bits = 20;
 ll caseNumber = 1;
 ////////////////////////////////////////////////////////////////
-/*
-
-
-*/
-
-
-
 
 void jabru() {
 
 
 }
-bool TestCase = 1;
+
+
+
+bool TestCase = 0;
+bool isGoogles = 0;
 
 
 
 //////////////////////////////////////////////////////////////////
 
 
-
-
-
-
-void brain_wash() {
-
-}
 
 
 //////////////////////////////////////////////////////////
@@ -79,12 +69,15 @@ int main() {
 	while (t--) {
 		if (isGoogles) {cout << "Case #" << caseNumber << ": ";} caseNumber++;
 		jabru();
-		brain_wash();
 
 	}
 	return 0;
 }
-
-/*
+/* stuff you should look for
+	* int overflow, array bounds
+	* special cases (n=1?)
+	* do smth instead of nothing and stay organized
+	* WRITE STUFF DOWN
+	* DON'T GET STUCK ON ONE APPROACH
 
 */
