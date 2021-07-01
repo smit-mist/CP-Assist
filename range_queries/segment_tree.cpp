@@ -68,13 +68,13 @@ struct segtree
 		values.assign(2 * size, NEUTRAL);
 	}
 
-	void build(vll &a, ll x, ll lx, ll rx) {
+	void build(vll &a, int x, int lx, int rx) {
 		if (rx - lx == 1) {
 			if (lx < (ll)a.size())
 				values[x] = single(a[lx]);
 			return;
 		}
-		ll mid = (rx + lx) / 2;
+		int mid = (rx + lx) / 2;
 		build(a, 2 * x + 1, lx, mid);
 		build(a, 2 * x + 2, mid, rx);
 		values[x] = merge(values[2 * x + 1], values[2 * x + 2]);
@@ -84,7 +84,7 @@ struct segtree
 		build(a, 0, 0, size);
 	}
 
-	void set(ll i, ll v, ll x, ll lx, ll rx) {
+	void set(int i, ll v, int x, int lx, int rx) {
 		if (rx - lx == 1) {
 			if (lx == i)
 				values[x] = single(v);
@@ -92,16 +92,16 @@ struct segtree
 		}
 		if (lx > i)return;
 		if (rx < i)return;
-		ll mid = (rx + lx) / 2;
+		int mid = (rx + lx) / 2;
 		set(i, v, 2 * x + 1, lx, mid);
 		set(i, v, 2 * x + 2, mid, rx);
 		values[x] = merge(values[2 * x + 1], values[2 * x + 2]);
 	}
 
-	void set(ll i, ll v) {
+	void set(int i, ll v) {
 		set(i, v, 0, 0, size);
 	}
-	Item Qg3(ll l, ll r, ll x, ll lx, ll rx) {
+	Item Qg3(int l, int r, int x, int lx, int rx) {
 		if (rx <= r && lx >= l) {
 			//	debug(values[x].x);
 			return values[x];
@@ -112,10 +112,10 @@ struct segtree
 		}
 		if (rx <= l)return NEUTRAL;
 		if (lx >= r)return NEUTRAL;
-		ll mid = (rx + lx) / 2;
+		int mid = (rx + lx) / 2;
 		return merge(Qg3(l, r, 2 * x + 1, lx, mid), Qg3(l, r, 2 * x + 2, mid, rx));
 	}
-	Item Qg3(ll l, ll r) {
+	Item Qg3(int l, int r) {
 		return Qg3(l, r, 0, 0, size);
 	}
 
