@@ -29,7 +29,7 @@ Tree & Graph
 - [Dijkstra's Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/dijkstra.cpp)
 
 Data Structures
-- [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/fenwick_aka_bst.cpp)
+- [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/fenwick_aka_bit.cpp)
 - [Segment Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/segment_tree.cpp)
 - [Disjoint Set Uninon](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/mst_krushkal.cpp)
 - [Sparse Table](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/sparse_table.cpp)
