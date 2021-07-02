@@ -61,7 +61,7 @@ ll get_hash(int a, int b) {
 	return here;
 }
 void solve() {
-	string s;
+	
 	cin >> s;
 	n = s.size();
 	compute_hash();
