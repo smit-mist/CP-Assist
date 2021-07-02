@@ -17,6 +17,7 @@ Basic Maths
 
 Basic Algorithms
 - [Binary Search](https://github.com/smit-mist/CP-Assist/blob/main/basic_algorithms/binary_search.cpp)
+- [String Hashing](https://github.com/smit-mist/CP-Assist/blob/main/basic_algorithms/string_hashing.cpp)
 
 Tree & Graph
 - [Basics (Components of Graph)](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/basic.cpp)
