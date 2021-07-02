@@ -58,7 +58,7 @@ struct segtree
 		//	}
 		return c;
 	}
-	Item single(int x) {
+	Item single(ll x) {
 		Item c;
 		c.x = x;
 		return c;
