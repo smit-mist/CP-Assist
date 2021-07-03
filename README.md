@@ -18,6 +18,7 @@ Basic Maths
 Basic Algorithms
 - [Binary Search](https://github.com/smit-mist/CP-Assist/blob/main/basic_algorithms/binary_search.cpp)
 - [String Hashing](https://github.com/smit-mist/CP-Assist/blob/main/basic_algorithms/string_hashing.cpp)
+- [Lexi Cmp of Substring of Same length](https://github.com/smit-mist/CP-Assist/blob/main/basic_algorithms/compare_two_substring_of_same_len.cpp)
 
 Tree & Graph
 - [Basics (Components of Graph)](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/basic.cpp)
