@@ -23,6 +23,13 @@ using namespace std;
 ////////////////////////////////////////////////////////////////
 // Binary Expo...
 // Calculates power in O(logN) here N is the power required...
+ll gcd (ll a, ll b) {
+	while (b) {
+		a %= b;
+		swap(a, b);
+	}
+	return a;
+}
 ll calcpo(ll a, ll b) {
 	ll res = 1;
 	while (b > 0) {
@@ -66,13 +73,7 @@ ll modInv(ll k) {
 // Iterative code for Gcd to calculate in O(logN)..
 // Here N is min(a,b)
 
-ll gcd (ll a, ll b) {
-	while (b) {
-		a %= b;
-		swap(a, b);
-	}
-	return a;
-}
+
 // To calculate nCr for given value of n and r modulo something..
 // include mod inverese and binary exponentiation...
 // also make an array to store factorial % mod...
@@ -119,7 +120,18 @@ vector<bool> Sieve(ll n) {
 	return is_prime;
 }
 
+vector<int> Sieve(ll n) {
 
+	vector<int> is_prime(n + 1, 0);
+	is_prime[0] = is_prime[1] = 0;
+	for (ll i = 2; i <= n; i++) {
+		if (is_prime[i] == 0 && 1LL * i * i <= n) {
+			for (ll j = i * i; j <= n; j += i)
+				is_prime[j] = i;
+		}
+	}
+	return is_prime;
+}
 void jabru() {
 }
 ////////////////////////////////////////////////////////////////
