@@ -132,6 +132,26 @@ vector<int> Sieve(ll n) {
 	}
 	return is_prime;
 }
+int NcR(int n, int r)
+{
+	int p = 1, k = 1;
+
+	if (n - r < r)
+		r = n - r;
+	while (r)
+	{
+		p *= n;
+		k *= r;
+		ll m = __gcd(p, k);
+		p /= m;
+		k /= m;
+		n--;
+		r--;
+	}
+
+	return p;
+
+}
 void jabru() {
 }
 ////////////////////////////////////////////////////////////////
