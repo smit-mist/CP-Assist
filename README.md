@@ -1,8 +1,6 @@
 # CP-Assist
 It contains short and faster version of many algorithms.
-
 [My CP Template](https://github.com/smit-mist/CP-Assist/blob/main/template.cpp)
-
 [Stress Testing](https://github.com/smit-mist/CP-Assist/blob/main/stress_test.cpp)
 
 Algorithms Implemented :-
@@ -24,7 +22,6 @@ Tree & Graph
 - [Topological Sort](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/topological_sort.cpp)
 - [Dijkstra's Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/dijkstra.cpp)
 - [Distance in Tree](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/tree_node_dist.cpp)
-- 
 
 Data Structures
 - [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/fenwick_aka_bit.cpp)
