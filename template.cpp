@@ -30,7 +30,7 @@ using namespace std;
 #define gu(a,s) get<a>(s)
 #define tin tuple<ll,ll,ll>
 #define ter(x,y,z) ((x)?y:z)
-#define eminem ios::sync_with_stdio(0);cin.tie(0);
+#define god_speed ios::sync_with_stdio(0);cin.tie(0);
 const ll maxn = 1e5 + 3;
 const ll nax = 1e5 + 2;
 const ll max_val = 5e4 + 10;
@@ -50,7 +50,7 @@ void solve() {
 
 
 int main() {
-	eminem;
+	god_speed;
 	ll t;
 	t = 1;
 	if (TestCase1) {

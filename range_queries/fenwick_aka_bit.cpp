@@ -22,38 +22,28 @@ using namespace std;
 #define X INT_MAX
 #define N INT_MIN
 ////////////////////////////////////////////////////////////////
-int n = 8;
-
-vll bst(100, 0);
-
-ll func(ll k) {
-	ll s = 0;
-	while (k >= 1) {
-		s += bst[k];
-		k -= (k & (-k));
+struct FenwickTree {
+	ll n;
+	vll bst;
+	void init(ll x) {
+		n = x;
+		bst.assign(n, 0);
 	}
-	return s;
-}
-void add(ll k, ll x) {
-	while (k <= n) {
-		bst[k] += x;
-		k += (k & (-k));
+	ll func(ll k) {
+		ll s = 0;
+		while (k >= 1 && k < n) {
+			s += bst[k];
+			k -= (k & (-k));
+		}
+		return s;
 	}
-}
-void jabru() {
-	vi v = {1, 3, 4, 8, 6, 1, 4, 2};
-	vll prefix(n + 1, 0);
-	ll sum = 0;
-	for (int i = 0; i < n; i++) {
-		sum += v[i];
-		prefix[i + 1] = sum;
+	void add(ll k, ll x) {
+		while (k <= n) {
+			bst[k] += x;
+			k += (k & (-k));
+		}
 	}
-	bst[0] = 0;
-	for (int i = 1; i <= n; i++) {
-		bst[i] = prefix[i] - prefix[i - (i & (-i))];
-	}
-
-}
+};
 
 
 int main() {
