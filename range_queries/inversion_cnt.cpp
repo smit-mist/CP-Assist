@@ -39,32 +39,35 @@ ll caseNumber = 1;
 #define endl "\n"
 /*
 count inversion for each bit, present or not-present.
-*/
-struct FenwickTree {
-	ll n;
-	vll bst;
-	void init(ll x) {
+*/struct FenwickTree {
+	int n;
+	vi bst;
+	void init(int x) {
 		n = x;
 		bst.assign(n, 0);
 	}
-	ll func(ll k) {
-		ll s = 0;
+	int func(int k) {
+		int s = 0;
 		while (k >= 1 && k < n) {
 			s += bst[k];
 			k -= (k & (-k));
 		}
 		return s;
 	}
-	void add(ll k, ll x) {
-		while (k <= n) {
+	void add(ll k, int x) {
+		while (k < n) {
 			bst[k] += x;
 			k += (k & (-k));
 		}
 	}
+	void clear() {
+		for (int i = 0; i < n; i++)bst[i] = 0;
+	}
 };
-
-ll cntInversions(vll v) {
-	set<ll>ok;
+FenwickTree tree;
+int cntInversions(vi v) {
+	tree.clear();
+	set<int>ok;
 	for (auto x : v)ok.insert(x);
 	int ind = 1;
 	map<int, int> id;
@@ -72,14 +75,12 @@ ll cntInversions(vll v) {
 
 		id[x] = ind; ind++;
 	}
-	for (auto x : id)debug2(x.F, x.S);
 
-	FenwickTree tree;
-	tree.init(ind + 1);
-	ll ans = 0;
+	for (int i = 0; i < v.size(); i++)v[i] = id[v[i]];
+	int ans = 0;
 	for (int i = 0; i < v.size(); i++) {
 		tree.add(v[i], 1LL);
-		ll tot = tree.func(ind);
+		int tot = tree.func(maxn);
 		tot -= tree.func(v[i]);
 		ans += tot > 0 ? tot : 0;
 	}

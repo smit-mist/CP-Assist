@@ -38,7 +38,7 @@ struct FenwickTree {
 		return s;
 	}
 	void add(ll k, ll x) {
-		while (k <= n) {
+		while (k < n) {
 			bst[k] += x;
 			k += (k & (-k));
 		}
