@@ -1,7 +1,6 @@
 # CP-Assist
 It contains short and faster version of many algorithms. 
 [My CP Template](https://github.com/smit-mist/CP-Assist/blob/main/template.cpp)
-
 [Stress Testing](https://github.com/smit-mist/CP-Assist/blob/main/stress_test.cpp)
 
 Algorithms Implemented :-
