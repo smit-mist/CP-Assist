@@ -7,13 +7,7 @@ It contains short and faster version of many algorithms.
 
 Algorithms Implemented :-
 
-Basic Maths
-- [GCD](https://github.com/smit-mist/CP-Assist/blob/main/math/basic_math.cpp)
-- [Sieve](https://github.com/smit-mist/CP-Assist/blob/main/math/basic_math.cpp)
-- [Binary Exp.](https://github.com/smit-mist/CP-Assist/blob/main/math/basic_math.cpp)
-- [Mod Inverse](https://github.com/smit-mist/CP-Assist/blob/main/math/basic_math.cpp)
-- [Binomial Co-efficient](https://github.com/smit-mist/CP-Assist/blob/main/math/basic_math.cpp)
-- [Linear Diophantine Equation](https://github.com/smit-mist/CP-Assist/blob/main/math/basic_math.cpp)
+[Basic Maths](https://github.com/smit-mist/CP-Assist/blob/main/math/basic_math.cpp)
 
 Basic Algorithms
 - [Binary Search](https://github.com/smit-mist/CP-Assist/blob/main/basic_algorithms/binary_search.cpp)
@@ -29,9 +23,14 @@ Tree & Graph
 - [Bipartite Test](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/bipartite_test.cpp)
 - [Topological Sort](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/topological_sort.cpp)
 - [Dijkstra's Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/dijkstra.cpp)
+- [Distance in Tree](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/tree_node_dist.cpp)
+- 
 
 Data Structures
 - [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/fenwick_aka_bit.cpp)
 - [Segment Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/segment_tree.cpp)
+- [Lzy SegTree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/simple_lz_prop.cpp)
+- [Lzy with Len](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/lz_prop_with_len.cpp)
 - [Disjoint Set Uninon](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/mst_krushkal.cpp)
 - [Sparse Table](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/sparse_table.cpp)
+- [Inversion Cnt](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/inversion_cnt.cpp)
