@@ -81,10 +81,27 @@ struct segtree
 	void init(ll n) {
 		size = 1;
 		while (size < n)size *= 2;
-		ops.assign(2 * size, 0LL);
+		ops.assign(2 * size, NO_OPERATION);
 		val.assign(2 * size, 0LL);
 	}
-
+	void build(int x, int lx, int rx, vll &a) {
+		if (rx - lx == 1) {
+			if (lx >= a.size()) {
+				val[x] = 0;
+			}
+			else {
+				val[x] = a[lx];
+			}
+			return;
+		}
+		int mid = (lx + rx) / 2;
+		build(2 * x + 1, lx, mid, a);
+		build(2 * x + 2, mid, rx, a);
+		val[x] = calc_op(val[2 * x + 1], val[2 * x + 2]);
+	}
+	void build(vll &a) {
+		build(0, 0, size, a);
+	}
 	void modify(int l, int r, ll v, int x, int lx, int rx) {
 		propagate(x, lx, rx);
 		if (lx >= r || l >= rx)return;
