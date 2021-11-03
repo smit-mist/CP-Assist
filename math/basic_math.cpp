@@ -85,7 +85,7 @@ ll nCr(ll n, ll r) {
 		return 0;
 	}
 
-	return (fact[n] * modInv(fact[r]) % mod * modInv(fact[n - r]) % mod) % mod;
+	return (fact[n] * ifact[r] % mod * ifact[n - r] % mod) % mod;
 }
 // Extended GCD use this to solve Ax+By = C type of equation...
 // This function will return the gcd of both numbers..
