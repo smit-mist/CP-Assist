@@ -16,13 +16,66 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(), x.rend()
 #define mint map<int,int>
-#define mod 998244353
 #define ciN cin
 #define X INT_MAX
 #define N INT_MIN
 ////////////////////////////////////////////////////////////////
-// Binary Expo...
-// Calculates power in O(logN) here N is the power required...
+struct ModArt
+{
+	ll mod;
+	int N;
+	vll fact, ifact;
+	void init(int x, ll m) {
+		N = x + 5;
+		mod = m;
+	}
+	ll mult(ll a, ll b)
+	{
+		return ((a % mod) * (b % mod)) % mod;
+	}
+
+	ll add(ll a, ll b)
+	{
+		return ((a % mod) + (b % mod)) % mod;
+	}
+	ll sub(ll a, ll b) {
+		return ((a % mod) - (b % mod) + mod) % mod;
+	}
+	ll calcpom(ll a, ll b) {
+		a %= mod;
+		ll res = 1;
+		while (b > 0) {
+			if (b & 1)
+				res = res * a % mod;
+			a = a * a % mod;
+			b >>= 1;
+		}
+		return res % mod;
+	}
+	ll modInv(ll k) {
+		return calcpom(k, mod - 2) % mod;
+	}
+	void calc_facts() {
+		fact.assign(N, 1LL);
+		ifact.assign(N, 1LL);
+		ifact[0] = modInv(fact[0]);
+		for (ll j = 1; j < N; j++) {
+			fact[j] = mult(j, fact[j - 1]);
+			ifact[j] = modInv(fact[j]);
+		}
+	}
+	ll nCr(ll n, ll r) {
+
+		if (r == 0)
+			return 1;
+		if (r > n) {
+			return 0;
+		}
+
+		return (fact[n] * ifact[r] % mod * ifact[n - r] % mod) % mod;
+	}
+
+};
 ll gcd (ll a, ll b) {
 	while (b) {
 		a %= b;
@@ -40,72 +93,6 @@ ll calcpo(ll a, ll b) {
 	}
 	return res;
 }
-// Binary Expo.. with MOD
-// Same func.. but gives ans%mod
-ll calcpom(ll a, ll b) {
-	a %= mod;
-	ll res = 1;
-	while (b > 0) {
-		if (b & 1)
-			res = res * a % mod;
-		a = a * a % mod;
-		b >>= 1;
-	}
-	return res % mod;
-}
-ll mult(ll a, ll b)
-{
-	return ((a % mod) * (b % mod)) % mod;
-}
-
-ll add(ll a, ll b)
-{
-	return ((a % mod) + (b % mod)) % mod;
-}
-ll sub(ll a, ll b) {
-	return ((a % mod) - (b % mod) + mod) % mod;
-}
-// Modulo inv. of a number mod must be prime number to use this
-// Also don't forget to inlucde calcpom with this one..
-ll modInv(ll k) {
-	return calcpom(k, mod - 2) % mod;
-}
-// Iterative code for Gcd to calculate in O(logN)..
-// Here N is min(a,b)
-
-
-// To calculate nCr for given value of n and r modulo something..
-// include mod inverese and binary exponentiation...
-// also make an array to store factorial % mod...
-ll nCr(ll n, ll r) {
-
-	if (r == 0)
-		return 1;
-	if (r > n) {
-		return 0;
-	}
-
-	return (fact[n] * ifact[r] % mod * ifact[n - r] % mod) % mod;
-}
-// Extended GCD use this to solve Ax+By = C type of equation...
-// This function will return the gcd of both numbers..
-// but X, Y later on can be used as co-efficient of the above equation and gives us the solution..
-// Though before using this check if C is divisible by d if not no solution is there.
-// Once again only in logn
-ll ext_gcd(ll a, ll b, ll& x, ll& y) {
-	x = 1, y = 0;
-	ll x1 = 0, y1 = 1, a1 = a, b1 = b;
-	while (b1) {
-		int q = a1 / b1;
-		tie(x, x1) = make_tuple(x1, x - q * x1);
-		tie(y, y1) = make_tuple(y1, y - q * y1);
-		tie(a1, b1) = make_tuple(b1, a1 - q * b1);
-	}
-	return a1;
-}
-// This gives us all the prime numbers till n inclusive..
-// It returns a vector of bool and its true if the index is prime else false..
-// Works in O(N(log(logN)))
 
 vector<bool> Sieve(ll n) {
 
@@ -151,6 +138,17 @@ int NcR(int n, int r)
 
 	return p;
 
+}
+ll ext_gcd(ll a, ll b, ll& x, ll& y) {
+	x = 1, y = 0;
+	ll x1 = 0, y1 = 1, a1 = a, b1 = b;
+	while (b1) {
+		int q = a1 / b1;
+		tie(x, x1) = make_tuple(x1, x - q * x1);
+		tie(y, y1) = make_tuple(y1, y - q * y1);
+		tie(a1, b1) = make_tuple(b1, a1 - q * b1);
+	}
+	return a1;
 }
 void jabru() {
 }

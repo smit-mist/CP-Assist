@@ -46,6 +46,65 @@ ll caseNumber = 1;
 
 
 */
+struct Item {
+	ll x;
+};
+struct sparse_table
+{
+	Item NEUTRAL = {1000000009};
+	vector<vector<Item>> tab;
+	int siz, bit;
+	Item merge(Item a, Item b) {
+		Item c;
+		c.x = min(a.x, b.x);
+		return c;
+	}
+	Item single(ll a) {
+		Item b; b.x = a; return b;
+	}
+	void init(int n) {
+		int val = 1;
+		bit = 0;
+		while (val <= n) {
+			bit++; val *= 2;
+		}
+		siz = n;
+		tab.assign(bit, vector<Item>(n, NEUTRAL));
+
+	}
+	void build(vll &v) {
+		for (int i = 0; i < siz; i++) {
+			tab[0][i] = single(v[i]);
+		}
+		for (int i = 1; i < bit; i++) {
+			for (int j = 0; j < siz; j++) {
+				Item f = tab[i - 1][j];
+				ll done = j + (1LL << (i - 1));
+				Item s = NEUTRAL;
+				if (done < siz) {
+					s = tab[i - 1][done];
+				}
+				tab[i][j] = merge(f, s);
+			}
+
+		}
+	}
+	Item calc(int l, int r) {
+		// 0-based indexing.
+		int len = r - l + 1;
+		int ind  = 0;
+		for (int i = bit - 1; i > -1; i--) {
+			if ((len & (1 << i))) {
+				ind = i; break;
+			}
+		}
+		Item a = tab[ind][l];
+		ll xx = r - (1LL << ind) + 1;
+		Item b = tab[ind][xx];
+		return merge(a, b);
+	}
+
+};
 ll dp[bits][maxn];
 void jabru() {
 	ll n, q; cin >> n >> q;
