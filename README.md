@@ -28,7 +28,7 @@ Tree & Graph
 Data Structures
 - [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/fenwick_aka_bit.cpp)
 - [Segment Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/segment_tree.cpp)
-- [Lzy SegTree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/simple_lz_prop.cpp)
+- [Lazy SegTree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/simple_lz_prop.cpp)
 - [Lzy with Len](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/lz_prop_with_len.cpp)
 - [Disjoint Set Uninon](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/disjoint_set_union.cpp)
 - [Sparse Table](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/sparse_table.cpp)
