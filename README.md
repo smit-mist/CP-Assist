@@ -24,6 +24,8 @@ Tree & Graph
 - [Distance in Tree](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/tree_node_dist.cpp)
 - [Tree Utils](https://github.com/smit-mist/CP-Assist/blob/main/tree_graph/tree_utils.cpp)
 
+DP
+- [Hamiltonian Path Algorithm](https://github.com/smit-mist/CP-Assist/blob/main/DP/hamiltonian%20problem%20using%20dp.cpp)
 
 Data Structures
 - [Fenwick Tree](https://github.com/smit-mist/CP-Assist/blob/main/range_queries/fenwick_aka_bit.cpp)
